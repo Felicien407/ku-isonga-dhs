@@ -1,60 +1,73 @@
-# ku-isonga-dhs
-KU ISONGA Digital Health Solutions — AI-powered chronic care coordination  platform connecting patients and healthcare providers. "Care that follows you."
-
 # KU ISONGA Digital Health Solutions
-> "Care that follows you."
+> *"Care that follows you."*
+
+![Platform](https://img.shields.io/badge/Platform-Web%20%7C%20Mobile%20%7C%20AI-blue)
+![Stack](https://img.shields.io/badge/Stack-Next.js%20%7C%20Node.js%20%7C%20Flutter%20%7C%20Python-green)
+![Status](https://img.shields.io/badge/Status-MVP%20%2F%20Hackathon-orange)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+---
 
 ## Overview
-KU ISONGA DHS is a technology-driven healthcare coordination platform designed to
-improve communication, continuity of care, and operational efficiency between patients
-and local healthcare facilities.
 
-## Problem
-> Missed appointments due to paper-based follow-up instructions.
-> Poor communication between healthcare providers and patients.
-> Lack of reliable channels for healthcare information.
-> Difficulty locating appropriate facilities when relocating or traveling.
-> Limited mechanisms for patient feedback.
+**KU ISONGA DHS** is a technology-driven healthcare coordination platform designed to improve communication, continuity of care, and operational efficiency between patients and local healthcare facilities. The project focuses on improving information flow within healthcare systems, particularly for patients living with chronic diseases such as diabetes and hypertension.
 
-## Solution
+The platform begins as a practical solution for chronic-care continuity, serving as a scalable foundation for future healthcare network coordination and population-level health intelligence.
+
+---
+
+## Problem Statement
+
+Many healthcare systems face a gap between policy goals and real service delivery at local healthcare centers:
+
+1. Missed appointments due to paper-based follow-up instructions.
+2. Poor communication between healthcare providers and patients.
+3. Lack of reliable channels for healthcare information.
+4. Difficulty locating appropriate facilities when relocating or traveling.
+5. Limited mechanisms for patient feedback.
+
+These problems lead to treatment interruption, inefficient resource use, and reduced patient satisfaction — especially for chronic disease management.
+
+---
+
 ## Core Functions
 
 ### 1. Clinician-Assigned Care Reminders
-Doctors assign appointments, medication schedules, and follow-up instructions 
-directly through a web-based clinic dashboard. Patients receive automated 
-reminders via the mobile app or SMS — ensuring no follow-up is missed.
+Doctors assign appointments, medication schedules, and follow-up instructions directly through a web-based clinic dashboard. Patients receive automated reminders via the mobile app or SMS — ensuring no follow-up is missed.
 
 ### 2. Continuity-of-Care Facility Locator
-Patients can search and locate nearby healthcare facilities equipped to manage 
-their specific chronic condition when they travel or relocate — so care never 
-stops, regardless of location.
+Patients can search and locate nearby healthcare facilities equipped to manage their specific chronic condition when they travel or relocate — so care never stops, regardless of location.
 
 ### 3. Patient Feedback & Information Channel
-Patients submit service feedback through the app. Facilities access aggregated, 
-AI-analyzed insights on their dashboard — turning patient voices into actionable 
-service improvements.
+Patients submit service feedback through the app. Facilities access aggregated, AI-analyzed insights on their dashboard — turning patient voices into actionable service improvements.
 
 ### 4. AI-Powered Health Coordination
-- **Missed Appointment Prediction** — Flags at-risk patients and triggers 
-  proactive reminders before visits are missed.
-- **Smart Reminder Optimization** — Personalizes reminder timing based on 
-  each patient's response patterns.
-- **Feedback Intelligence** — Automatically identifies recurring service 
-  issues from patient feedback using natural language analysis.
+- **Missed Appointment Prediction** — Flags at-risk patients and triggers proactive reminders before visits are missed.
+- **Smart Reminder Optimization** — Personalizes reminder timing based on each patient's response patterns.
+- **Feedback Intelligence** — Automatically identifies recurring service issues from patient feedback using natural language analysis.
 
-> AI outputs assist healthcare staff in decision-making — without replacing 
-> clinical judgment.
+> 💡 AI outputs assist healthcare staff in decision-making — without replacing clinical judgment.
+
+---
 
 ## Tech Stack
-- Frontend: Next.js
-- Mobile: Flutter
-- Backend: Node.js / Express
-- AI: Python / FastAPI
-- Database: PostgreSQL
+
+| Layer | Technology |
+|---|---|
+| Frontend (Provider Dashboard) | Next.js |
+| Mobile (Patient App) | Flutter |
+| Backend (Core API) | Node.js / Express |
+| AI Module | Python / FastAPI |
+| Database | PostgreSQL (via Supabase) |
+| SMS Integration | Africa's Talking |
+| AI Intelligence | Anthropic Claude API |
+
+---
 
 ## Project Structure
+
+```
 ku-isonga-dhs/
-```bash
 │
 ├── apps/
 │   ├── web/                  # Next.js — Provider Dashboard
@@ -81,7 +94,7 @@ ku-isonga-dhs/
 │   │   ├── models/
 │   │   ├── middleware/
 │   │   └── services/
-│   ├── prisma/               # Database schema
+│   ├── prisma/
 │   └── package.json
 │
 ├── docs/                     # Documentation
@@ -94,12 +107,15 @@ ku-isonga-dhs/
 │
 ├── .gitignore
 ├── README.md
-└── docker-compose.yml        # Optional, for running everything locally
+└── docker-compose.yml
 ```
+
+---
 
 ## Getting Started
 
 ### Prerequisites
+
 Make sure you have the following installed on your machine:
 
 - [Node.js](https://nodejs.org/) v18+
@@ -184,15 +200,58 @@ flutter run
 > 💡 **Tip:** Run each service in a separate terminal window.
 > For a one-command setup, use `docker-compose up` (coming soon).
 
+---
+
+## Branch Strategy
+
+```
+main          → stable, demo-ready code only
+develop       → integration branch (merge here first)
+│
+├── feat/web-dashboard      # Frontend dev
+├── feat/mobile-app         # Flutter dev
+├── feat/backend-api        # Backend dev
+├── feat/ai-module          # AI dev
+└── fix/[bug-name]          # Bug fixes
+```
+
+> ⚠️ Nobody pushes directly to `main`. All changes go through `develop` first via Pull Request.
+
+---
+
 ## Team
-| Role | Name |
-|------|------|
-| Product Lead | Niyomwungeri Felicien |
-| Technical Lead | Niyomugabo Fidele |
-| Frontend Dev | Sangwamana Emeran |
-| Mobile Dev | Niyomwungeri Felicien |
-| AI / Backend | Team Devs |
-| HS-Research & Communication Lead | Aisha Kaitu Koita |
+
+| Role | Responsibility |
+|---|---|
+| Product Lead | Problem definition and system design |
+| Technical Lead | Backend and AI integration |
+| Frontend Developer | Next.js provider dashboard |
+| Mobile Developer | Flutter patient app |
+| Health Systems Research Lead | Workflow validation and user needs |
+| Pitch & Communication Lead | Presentation and stakeholder narrative |
+
+---
+
+## Expected Impact
+
+1. Reduced missed appointments
+2. Improved treatment adherence
+3. Better patient satisfaction
+4. Enhanced operational decision-making for clinics
+5. Early foundation for population health analytics
+
+---
+
+## Future Roadmap
+
+1. Pilot testing with a local clinic
+2. Collect real user feedback and refine workflows
+3. Expand AI models using real operational data
+4. Introduce referral coordination between facilities
+5. Explore partnership with regional health stakeholders
+
+---
 
 ## License
-MIT
+
+MIT © 2026 [AfyaSync](https://github.com/afyasync) — Kigali, Rwanda
