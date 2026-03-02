@@ -54,6 +54,7 @@ service improvements.
 
 ## Project Structure
 ku-isonga-dhs/
+```bash
 │
 ├── apps/
 │   ├── web/                  # Next.js — Provider Dashboard
@@ -94,6 +95,7 @@ ku-isonga-dhs/
 ├── .gitignore
 ├── README.md
 └── docker-compose.yml        # Optional, for running everything locally
+```
 
 ## Getting Started
 
@@ -185,11 +187,12 @@ flutter run
 ## Team
 | Role | Name |
 |------|------|
-| Product Lead | |
-| Technical Lead | |
-| Frontend Dev | |
-| Mobile Dev | |
-| AI / Backend | |
+| Product Lead | Niyomwungeri Felicien |
+| Technical Lead | Niyomugabo Fidele |
+| Frontend Dev | Sangwamana Emeran |
+| Mobile Dev | Niyomwungeri Felicien |
+| AI / Backend | Team Devs |
+| HS-Research & Communication Lead | Aisha Kaitu Koita |
 
 ## License
 MIT
